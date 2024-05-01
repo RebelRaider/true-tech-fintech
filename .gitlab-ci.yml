@@ -1,4 +1,4 @@
-image: docker
+image: gitlab/gitlab-runner:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -13,6 +13,14 @@ stages:
 test:
   stage: test
   script:
+    - git submodule update --init --recursive  # Подтягиваем все подмодули, включая frontend и backend
+    - |
+      if [ -d "frontend" ] && [ -n "$(ls -A frontend)" ] && [ -d "backend" ] && [ -n "$(ls -A backend)" ]; then
+        echo "Submodules frontend and backend were successfully pulled and are not empty."
+      else
+        echo "Failed to pull submodules frontend and/or backend, or they are empty."
+        exit 1
+      fi
     - echo run tests in this section
 
 step-deploy-prod:
