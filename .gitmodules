@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://git.codenrock.com/true-tech-hack-1150/cnrprod1714212402-team-69320/true-tech-hack-fintech.git
+	branch = frontend
+
+[submodule "backend"]
+	path = backend
+	url = https://git.codenrock.com/true-tech-hack-1150/cnrprod1714212402-team-69320/true-tech-hack-fintech.git
+	branch = backend
