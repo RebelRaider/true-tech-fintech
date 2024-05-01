@@ -7,3 +7,6 @@
 	path = backend
 	url = https://git.codenrock.com/true-tech-hack-1150/cnrprod1714212402-team-69320/true-tech-hack-fintech.git
 	branch = backend
+[submodule "true-tech-hack-fintech"]
+	path = true-tech-hack-fintech
+	url = git@git.codenrock.com:true-tech-hack-1150/cnrprod1714212402-team-69320/true-tech-hack-fintech.git
