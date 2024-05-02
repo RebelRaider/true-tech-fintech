@@ -16,7 +16,8 @@ test:
   script:
     - git submodule init
     - git submodule update --init --recursive
-      if [ -d "frontend" ] && [ -n "$(ls -A frontend)" ] && [ -d "backend" ] && [ -n "$(ls -A backend)" ]; then
+    - |
+      if [ -n "$(ls -A frontend)" ] && [ -n "$(ls -A backend)" ]; then
         echo "Submodules frontend and backend were successfully pulled and are not empty."
       else
         echo "Failed to pull submodules frontend and/or backend, or they are empty."
