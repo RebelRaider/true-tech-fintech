@@ -23,7 +23,13 @@ test:
         echo "Failed to pull submodules frontend and/or backend, or they are empty."
         exit 1
       fi
-    - echo run tests in this section
+    - echo "in frontend submodule:"
+    - ls frontend
+    - echo "in backend submodule:"
+    - ls backend
+    - echo "git staus:"
+    - git status
+    - echo "run tests in this section."
 
 step-deploy-prod:
   stage: deploy
