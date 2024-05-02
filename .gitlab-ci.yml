@@ -1,0 +1,47 @@
+image: docker
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
+
+services:
+  - docker:dind
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  only:
+    - main
+  script:
+    - |
+      if [ -n "$(ls -A frontend)" ] && [ -n "$(ls -A backend)" ]; then
+        echo "Submodules frontend and backend were successfully pulled and are not empty."
+      else
+        echo "Failed to pull submodules frontend and/or backend, or they are empty."
+        exit 1
+      fi
+    - echo "in frontend submodule:"
+    - ls frontend
+    - echo "in backend submodule:"
+    - ls backend
+    - echo "git status:"
+    - git status
+    - echo "run tests in this section."
+
+step-deploy-prod:
+  stage: deploy
+  script:
+    - apt-get install -y python3-pip
+    - pip3 install --upgrade setuptools
+    - pip3 install docker-compose
+    - docker image prune -f
+    - docker-compose build --no-cache
+    - docker-compose up -d
+  environment: production
+  rules:
+    - if: $CI_COMMIT_MESSAGE =~ /prod/
+      when: always
+    - when: manual
