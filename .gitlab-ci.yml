@@ -2,6 +2,7 @@ image: docker
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
 
 services:
   - docker:dind
@@ -9,10 +10,6 @@ services:
 stages:
   - test
   - deploy
-
-before_script:
-  - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
-  - chmod 644 ~/.ssh/known_hosts
 
 test:
   stage: test
