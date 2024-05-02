@@ -3,7 +3,6 @@ image: docker
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_SUBMODULE_FORCE_HTTPS: "true"
-  GIT_SUBMODULE_UPDATE_FLAGS: --init --recursive --remote
 
 services:
   - docker:dind
@@ -14,6 +13,8 @@ stages:
 
 test:
   stage: test
+  only:
+    - main
   script:
     - |
       if [ -n "$(ls -A frontend)" ] && [ -n "$(ls -A backend)" ]; then
