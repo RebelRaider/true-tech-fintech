@@ -15,7 +15,7 @@ test:
   stage: test
   script:
     - git submodule init
-    - git submodule update --init --recursive
+    - git submodule update --init --recursive --remote
     - |
       if [ -n "$(ls -A frontend)" ] && [ -n "$(ls -A backend)" ]; then
         echo "Submodules frontend and backend were successfully pulled and are not empty."
@@ -34,10 +34,12 @@ test:
 step-deploy-prod:
   stage: deploy
   script:
-    - apt-get install -y python3-pip
-    - pip3 install --upgrade setuptools
-    - pip3 install docker-compose
-    - docker image prune -f
+    - sudo apt-get install -y python3-pip
+    - sudo pip3 install --upgrade setuptools
+    - sudo pip3 install docker-compose
+    - sudo docker image prune -f
+    - git submodule init
+    - git submodule update --init --recursive --remote
     - docker-compose build --no-cache
     - docker-compose up -d
   environment: production
