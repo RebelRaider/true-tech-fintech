@@ -2,7 +2,7 @@ version: "3"
 services:
   backend:
     build:
-      context: ./backend
+      context: backend
       dockerfile: Dockerfile
     container_name: backend
     depends_on:
@@ -14,7 +14,7 @@ services:
   postgres:
     build:
       context: .docker/postgres
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     container_name: postgres
     volumes:
       - postgres_storage:/var/lib/postgresql/data
@@ -30,7 +30,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: frontend
       dockerfile: Dockerfile
     container_name: frontend
     command: >
@@ -40,8 +40,8 @@ services:
 
   nginx:
     build:
-      dockerfile: ./Dockerfile
-      context: ./.docker/nginx/
+      dockerfile: Dockerfile
+      context: .docker/nginx/
     container_name: nginx
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
