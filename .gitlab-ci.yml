@@ -40,17 +40,16 @@ test-submodules:
     - git status
     - echo "run tests in this section."
 
-
-test:
+test-backend:
   stage: test
   only:
     - main
   image: python:3.11
   script:
-  - pip install ruff pytest poetry
-  - ruff check backend
-  - cd backend && poetry install
-  - cd backend && poetry run pytest
+  - cd backend
+  - poetry install
+  - poetry run ruff check backend
+  - poetry run pytest
 
 step-deploy-prod:
   stage: deploy
