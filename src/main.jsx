@@ -15,11 +15,11 @@ export const Context = createContext({
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainPage />,
+        element: <MobileVersion />,
     },
     {
         path: "/mobile",
-        element: <MobileVersion />
+        element: <MobileVersion />,
     },
     {
         path: "/chat",
