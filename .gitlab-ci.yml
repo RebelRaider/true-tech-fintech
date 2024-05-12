@@ -11,7 +11,7 @@ stages:
   - test
   - deploy
 
-test:
+test-submodules:
   stage: test
   only:
     - main
@@ -30,9 +30,17 @@ test:
     - echo "git status:"
     - git status
     - echo "run tests in this section."
-    - pip install ruff pytest
-    - ruff backend
-    - pytest backend
+
+
+test:
+  stage: test
+  only:
+    - main
+  image: python:3.11
+  script:
+  - pip install ruff pytest
+  - ruff backend
+  - pytest backend
 
 step-deploy-prod:
   stage: deploy
