@@ -46,8 +46,6 @@ services:
       - frontend_volume:/usr/share/nginx/html
     env_file:
       - .docker/.env
-    environment:
-      SERVER_NAME: 188.124.37.121.sslip.io
     depends_on:
       - backend
       - frontend
