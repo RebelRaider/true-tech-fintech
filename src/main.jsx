@@ -4,6 +4,7 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage.jsx";
 import Store from "./store/store.js";
+import MobileVersion from "./components/MobileVersion/MobileVersion.jsx";
 
 const store = new Store();
 export const Context = createContext({
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainPage />,
     },
+    {
+        path: "/mobile",
+        element: <MobileVersion />
+    }
 ])
 
 

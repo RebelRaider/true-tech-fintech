@@ -1,8 +1,10 @@
+import styles from "./ChatPage.module.css";
+
 
 
 const ChatPage = () => {
     return (
-        <div>
+        <div className={styles.MainContainer}>
 
         </div>
     )
