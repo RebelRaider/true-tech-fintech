@@ -1,0 +1,106 @@
+.MainContainer {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    background-color: #f0f0f0;
+}
+
+.SectorContainer {
+    position:relative;
+    width: 390px; /* Ширина экрана телефона */
+    height: 850px; /* Высота экрана телефона */
+    border: 3px solid black; /* Толстая черная рамка */
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start; /* Центрирование содержимого телефона по вертикали */
+    justify-content: flex-start; /* Центрирование содержимого телефона по горизонтали */
+    background-color: #F2F3F7; /* Фон экрана телефона */
+    border-radius: 36px; /* Скругление углов рамки */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для имитации толщины устройства */
+}
+
+.HeaderContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 4%;
+    padding-left: 5%;
+    gap: 25%;
+
+}
+
+.TextDecoration {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.RedText {
+    color: #E30510;
+}
+
+.Icon {
+    cursor: pointer;
+}
+
+.ContainerMain {
+    margin-top: 5%;
+    width: 100%;
+    height: 740px;
+    background-image: linear-gradient(to bottom, #5A4C81, #DF6377);
+}
+
+.BottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 50px;
+    gap: 5%;
+}
+
+.input {
+    margin-left: 5%;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E3E4EA;
+    font-size: 16px;
+    padding: 2px 2px 2px 10px;
+}
+
+
+.LeftMessage, .RightMessage {
+    width: 200px;
+    height: max-content;
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.LeftMessage {
+    background-color: #5A4C81;
+    text-align: left;
+    margin-right: auto;
+}
+
+.RightMessage {
+    background-color: #DF6377;
+    text-align: right;
+    margin-left: auto;
+}
+
