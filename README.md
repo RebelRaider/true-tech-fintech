@@ -1,4 +1,4 @@
-# MTS Assistant for People with Disabilities (MTS Assistant для людей с ОВЗ)
+# MTS Assistant for People with Disabilities (MTS Assistant для людей с ОВЗ) (main Module)
 
 ## О проекте
 
