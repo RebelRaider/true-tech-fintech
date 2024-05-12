@@ -8,8 +8,17 @@ services:
   - docker:dind
 
 stages:
+  - build
   - test
   - deploy
+
+updated-submodules:
+  stage: build
+  only:
+    - main
+  script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
 
 test-submodules:
   stage: test
