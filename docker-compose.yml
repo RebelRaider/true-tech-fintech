@@ -34,7 +34,7 @@ services:
     command: >
       bash -c "npm run build"
     volumes:
-      - frontend_volume:/app/build
+      - frontend_volume:/app/dist
 
   nginx:
     build:
