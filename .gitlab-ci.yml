@@ -49,7 +49,7 @@ test:
   script:
   - pip install ruff pytest poetry
   - ruff check backend
-  - poetry install
+  - cd backend && poetry install
   - poetry run pytest backend
 
 step-deploy-prod:
