@@ -6,7 +6,6 @@ import CardMTS from '../../assets/Card MTS Bank.svg'
 const MainPage = () => {
     return (
         <main role="main" className={styles.MainContainer} aria-label="Главная страница">
-            <div className={styles.HeaderPadding}></div>
             <header className={styles.HeaderContainer}>
                 <img src={mtsLogo} width={154} height={40} className={styles.ImgStyle}></img>
                 <p className={styles.HeaderFontStyle}>Главная</p>
