@@ -17,4 +17,7 @@ export default class MessageService {
     static async NextTasks(id) {
         return axios.get(`https://188.124.37.121.sslip.io:8000/api/v1/active_action/next_tasks/${id}`)
     }
+    static async doAll(id,nextID,transcript) {
+        return axios.post(`https://188.124.37.121.sslip.io:8000/api/v1/active_action/do_all/${id}`, {next_node_id:nextID, value: transcript}, {headers: {'Content-Type': 'application/json'}})
+    }
 }
