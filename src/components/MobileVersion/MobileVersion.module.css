@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    background-color: #f0f0f0; /* Фон страницы */
+}
+
+/* Стили для контейнера, имитирующего мобильный телефон */
+.MainContainer {
+    width: 390px; /* Ширина экрана телефона */
+    height: 872px; /* Высота экрана телефона */
+    border: 3px solid black; /* Толстая черная рамка */
+    display: flex;
+    align-items: center; /* Центрирование содержимого телефона по вертикали */
+    justify-content: center; /* Центрирование содержимого телефона по горизонтали */
+    background-color: white; /* Фон экрана телефона */
+    border-radius: 36px; /* Скругление углов рамки */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для имитации толщины устройства */
+}

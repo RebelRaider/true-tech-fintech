@@ -1,3 +1,5 @@
+
+
 .MainContainer {
     background-color: #F7F7F7;
     width: 100%;
@@ -47,9 +49,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     align-content: flex-start;
-    grid-gap: 3%;
 }
 
 .LeftBar {
@@ -63,12 +63,207 @@
     width: 284px;
     height: 100px;
     background-color: #FFFFFF;
-    border-radius: 30px;
+    border-radius: 25px;
     align-items: flex-start;
     justify-content: center;
-    grid-gap: 2%;
+    margin-bottom: 20px;
+}
+
+.UpperCaseText {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
+    padding-left: 8%;
+    padding-bottom: 10px;
+}
+
+.CaseText {
+    padding-left: 8%;
+    padding-bottom: 5%;
+    padding-top: 8%;
+    cursor: pointer;
+}
+
+.CaseTextNumber {
+    width: 261px;
+    padding-left: 8%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.Up {
+    font-weight: 600;
+}
+
+.CardBar {
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+    height: 331px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.UpperCaseTextCard {
+    font-family: 'Inter', sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
+    padding-top: 8%;
+    padding-left: 8%;
+    padding-bottom: 6%;
+}
+
+.DepositBar {
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+    height: 141px;
+    background-color: #FFFFFF;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.CreditBar {
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+    height: 141px;
+    background-color: #FFFFFF;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.Button {
+    background-color: #E30611;
+    border: none;
+    border-radius: 11px;
+    width: 100%;
+    height: 52px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.Button:hover {
+    background-color: darkred;
+}
+
+.imgStyle {
+    padding-left: 50px;
+}
+
+.AddButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 
+.CaseTextButton {
+    width: 200px;
+    cursor: pointer;
+    padding: 5% 5% 5% 10%;
+}
+
+.UpperCaseTextCardButton {
+    font-family: 'Inter', sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.UpperCaseTextCardButton:hover {
+    color: #E30611;
+}
+
+.UpperCaseTextCard:hover {
+    color: #E30611;
+}
+
+.RightBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 4%;
+    grid-gap: 9%;
+}
+
+.Templates {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+
+}
+
+.TemplatesUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    align-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 3%;
+}
+
+.BottomTemplate {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 4%;
+}
+
+.Card {
+    width: 215px;
+    height: 156px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+
+.CashBackBorder {
+    width: 462px;
+    height: 164px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+}
+
+.Circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 30px;
+    background-color: #F2F3F7;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.TextOnCard {
+    padding-left: 30px;
+}
+
+.MTSCachBack {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 5%;
+    padding-left: 6%;
+}
 
 
