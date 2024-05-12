@@ -1,0 +1,74 @@
+.MainContainer {
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.HeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 79px;
+    padding-left: 14%;
+    grid-gap: 1%;
+    background-color: #FFFFFF;
+}
+
+.ImgStyle {
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.HeaderPadding {
+    height: 53px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+
+.HeaderFontStyle {
+    font-family: 'Inter', sans-serif;
+    font-size: 13pt;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.BodyContainer {
+    background-color: #F2F3F7;
+    width: 100%;
+    height: 100%;
+    padding-left: 14%;
+    padding-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    grid-gap: 3%;
+}
+
+.LeftBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.PhoneBar {
+    display: flex;
+    flex-direction: column;
+    width: 284px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 2%;
+}
+
+
+
+
