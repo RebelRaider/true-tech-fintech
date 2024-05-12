@@ -50,7 +50,7 @@ test:
   - pip install ruff pytest poetry
   - ruff check backend
   - cd backend && poetry install
-  - poetry run pytest backend
+  - cd backend && poetry run pytest
 
 step-deploy-prod:
   stage: deploy
