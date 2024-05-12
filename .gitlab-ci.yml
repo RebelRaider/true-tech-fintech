@@ -47,9 +47,10 @@ test:
     - main
   image: python:3.11
   script:
-  - pip install ruff pytest
+  - pip install ruff pytest poetry
   - ruff check backend
-  - pytest backend
+  - poetry install
+  - poetry run pytest backend
 
 step-deploy-prod:
   stage: deploy
