@@ -22,7 +22,7 @@ MTS Assistant для людей с ОВЗ - это инновационное р
    - В файле `docker-compose.yml` настройте публикацию портов, чтобы обеспечить доступ к сервисам извне.
 
 5. **Скачивание модели**:
-   - Скачать модель LLM Saiga можно по `[ссылке](https://huggingface.co/IlyaGusev/saiga_mistral_7b_gguf/resolve/main/model-q8_0.gguf?download=true)` и добавить в backend/ml/models.
+   - Скачать модель LLM Saiga можно по [ссылке](https://huggingface.co/IlyaGusev/saiga_mistral_7b_gguf/resolve/main/model-q8_0.gguf?download=true) и добавить в backend/ml/models.
 
 6. **Запуск приложения**:
    - Используйте команду `docker-compose up` для запуска всех компонентов системы.
